@@ -117,4 +117,7 @@ function postJob() {
   window.location.href = "jobs.html";
   return false;
 }
+function toggleMenu() {
+  document.getElementById("menu").classList.toggle("show");
+}
 

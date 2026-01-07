@@ -221,3 +221,98 @@ input, select {
     width: 90%;
   }
 }
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 20px;
+  }
+
+  nav h2 {
+    margin-bottom: 10px;
+  }
+
+  nav ul {
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+  }
+
+  nav ul li {
+    margin: 8px 0;
+  }
+
+  .hero {
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 30px;
+  }
+
+  .hero input {
+    width: 90%;
+  }
+
+  form {
+    width: 90%;
+    margin: 40px auto;
+  }
+
+  #search {
+    width: 90%;
+  }
+
+  #jobList {
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  .job {
+    padding: 20px;
+  }
+
+  .btn {
+    width: 90%;
+    text-align: center;
+  }
+
+}
+.menu-icon {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav ul {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(135deg,#0a2540,#123b72);
+    flex-direction: column;
+    text-align: center;
+    display: none;
+    padding: 10px 0;
+    border-radius: 0 0 12px 12px;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 12px 0;
+  }
+}
+
