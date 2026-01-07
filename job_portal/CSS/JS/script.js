@@ -1,33 +1,42 @@
-function registerUser() {
-  let name = document.getElementById("name").value;
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
-  let role = document.getElementById("role").value;
+function registerUser(){
+  let user = {
+    name: name.value,
+    email: email.value,
+    password: password.value,
+    role: role.value
+  };
 
-  if(name=="" || email=="" || password=="" || role=="") {
+  if(user.name=="" || user.email=="" || user.password=="" || user.role==""){
     alert("All fields required");
     return false;
   }
 
-  if(password.length < 6) {
+  if(user.password.length < 6){
     alert("Password must be 6 characters");
     return false;
   }
 
+  localStorage.setItem("user", JSON.stringify(user));
   alert("Registered Successfully");
 }
 
-function loginUser() {
-  let email = document.getElementById("loginEmail").value;
-  let pass = document.getElementById("loginPassword").value;
 
-  if(email=="" || pass=="") {
-    alert("Enter all details");
+function loginUser(){
+  let savedUser = JSON.parse(localStorage.getItem("user"));
+
+  if(!savedUser){
+    alert("Please Register First");
     return false;
   }
 
-  alert("Login Successful");
+  if(loginEmail.value == savedUser.email && loginPassword.value == savedUser.password){
+    alert("Login Successful");
+    window.location.href = "jobs.html";
+  } else {
+    alert("Invalid Login");
+  }
 }
+
 
 
 let jobs = [
