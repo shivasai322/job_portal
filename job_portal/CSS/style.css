@@ -3,6 +3,9 @@ body {
   background: #f4f6f8;
   margin: 0;
 }
+h2{
+    text-align: center;
+}
 
 nav {
   background: #222;
