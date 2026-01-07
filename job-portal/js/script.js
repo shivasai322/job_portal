@@ -57,11 +57,12 @@ function toggleDark() {
   document.body.classList.toggle("dark");
 }
 
-let jobs = [
+let jobs = JSON.parse(localStorage.getItem("jobs")) || [
   { title: "Developer", company: "Google", location: "Hyderabad" },
   { title: "Tester", company: "TCS", location: "Chennai" },
   { title: "Designer", company: "Infosys", location: "Bangalore" }
 ];
+
 
 let jobList = document.getElementById("jobList");
 
@@ -77,6 +78,8 @@ if (jobList) {
 `;
 
   });
+  localStorage.setItem("jobs", JSON.stringify(jobs));
+
 }
 
 function applyJob() {
@@ -93,3 +96,25 @@ function filterJobs() {
     cards[i].style.display = text.includes(input) ? "" : "none";
   }
 }
+function postJob() {
+  let role = document.getElementById("jobRole").value;
+  let company = document.getElementById("companyName").value;
+  let location = document.getElementById("jobLocation").value;
+
+  if (role === "" || company === "" || location === "") {
+    alert("All fields required");
+    return false;
+  }
+
+  let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
+
+  jobs.push({ title: role, company: company, location: location });
+
+  localStorage.setItem("jobs", JSON.stringify(jobs));
+
+  alert("Job Posted Successfully");
+
+  window.location.href = "jobs.html";
+  return false;
+}
+

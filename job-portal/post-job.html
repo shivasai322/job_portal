@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Post Job</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav>
+  <h2>Job Portal</h2>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="jobs.html">Jobs</a></li>
+  </ul>
+</nav>
+
+<form onsubmit="return postJob()">
+  <h2>Post a Job</h2>
+
+  <input type="text" id="jobRole" placeholder="Job Role">
+  <input type="text" id="companyName" placeholder="Company Name">
+  <input type="text" id="jobLocation" placeholder="Location">
+
+  <button class="btn">Post Job</button>
+</form>
+
+<script src="./js/script.js"></script>
+</body>
+</html>

@@ -6,29 +6,41 @@
 }
 
 body {
-  background: #f4f7fc;
+  background: #fcf4f4;
   color: #333;
 }
-
+h2{
+  text-align: center;
+  padding: 30px;
+  font-size: xx-large;
+}
 /* ================== NAVBAR ================== */
 
+/* ========== PROFESSIONAL NAVBAR ========== */
+
 nav {
-  background: #0a2540;
-  padding: 15px 40px;
+  background: linear-gradient(135deg,#05c7f3,#127250);
+  padding: 14px 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  color: white;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.25);
 }
 
 nav h2 {
+  color:white;
   font-size: 24px;
+  font-weight: 700;
   letter-spacing: 1px;
 }
 
 nav ul {
   display: flex;
   list-style: none;
+  padding: 20px;
+  background-color: #00aeff;
+  border-radius: 20px;
 }
 
 nav ul li {
@@ -36,15 +48,33 @@ nav ul li {
 }
 
 nav a {
+  position: relative;
   color: white;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 20px;
+  padding: 6px 4px;
   transition: 0.3s;
 }
 
-nav a:hover {
-  color: #00d1ff;
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0%;
+  height: 2px;
+  background: #00d1ff;
+  transition: 0.3s;
 }
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #00ff66;
+}
+
 
 /* ================== HERO ================== */
 
