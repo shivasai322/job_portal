@@ -31,27 +31,24 @@ function loginUser() {
   let loginEmail = document.getElementById("loginEmail").value;
   let loginPassword = document.getElementById("loginPassword").value;
 
-  if (loginEmail === "" || loginPassword === "") {
-    alert("Enter all details");
-    return false;
-  }
-
   let savedUser = JSON.parse(localStorage.getItem("user"));
 
   if (!savedUser) {
-    alert("Please Register First");
+    alert("Please register first");
     return false;
   }
 
   if (loginEmail === savedUser.email && loginPassword === savedUser.password) {
-    alert("Login Successful");
-    window.location.href = "jobs.html";
+    localStorage.setItem("loggedIn", "true");
+    alert("Login successful");
+    window.location.href = "index.html";
   } else {
-    alert("Invalid Login");
+    alert("Invalid credentials");
   }
 
   return false;
 }
+
 
 function toggleDark() {
   document.body.classList.toggle("dark");
@@ -119,5 +116,13 @@ function postJob() {
 }
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("show");
+}
+function checkLogin() {
+  let status = localStorage.getItem("loggedIn");
+
+  if (status !== "true") {
+    alert("Please login first");
+    window.location.href = "login.html";
+  }
 }
 
