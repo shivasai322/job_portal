@@ -1,0 +1,193 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4f7fc;
+  color: #333;
+}
+
+/* ================== NAVBAR ================== */
+
+nav {
+  background: #0a2540;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+nav h2 {
+  font-size: 24px;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #00d1ff;
+}
+
+/* ================== HERO ================== */
+
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(120deg,#0a2540,#102e5f);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+}
+
+.hero input {
+  width: 300px;
+  padding: 12px;
+  border-radius: 5px;
+  border: none;
+  margin-top: 20px;
+}
+
+/* ================== BUTTONS ================== */
+
+.btn {
+  display: inline-block;
+  background: #00d1ff;
+  color: #002244;
+  padding: 12px 24px;
+  margin: 15px 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
+
+.secondary {
+  background: #00ffb3;
+}
+
+/* ================== FORMS ================== */
+
+form {
+  width: 350px;
+  margin: 60px auto;
+  background: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* ================== JOBS PAGE ================== */
+
+#jobList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(260px,1fr));
+  gap: 25px;
+  padding: 40px;
+}
+
+.job {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  transition: 0.3s;
+}
+
+.job:hover {
+  transform: translateY(-5px);
+}
+
+.job b {
+  font-size: 18px;
+  color: #0a2540;
+}
+
+.job p {
+  margin: 8px 0;
+  color: #555;
+}
+
+/* ================== SEARCH ================== */
+
+#search {
+  display: block;
+  width: 60%;
+  margin: 30px auto;
+  padding: 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+/* ================== DARK MODE ================== */
+
+.dark {
+  background: #0d1117;
+  color: white;
+}
+
+.dark nav {
+  background: black;
+}
+
+.dark .job, 
+.dark form {
+  background: #161b22;
+  color: white;
+}
+
+/* ================== RESPONSIVE ================== */
+
+@media(max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  #search {
+    width: 90%;
+  }
+}
