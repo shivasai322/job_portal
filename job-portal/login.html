@@ -6,13 +6,20 @@
 </head>
 <body>
 
-<h2>Login</h2>
+<!-- <h2>Login</h2> -->
 
 <form onsubmit="return loginUser()">
-  <input type="email" id="loginEmail" placeholder="Email"><br>
-  <input type="password" id="loginPassword" placeholder="Password"><br>
-  <button class="btn">Login</button>
+  <h2>Login</h2>
+
+  <input type="email" id="loginEmail" placeholder="Email" required>
+  <input type="password" id="loginPassword" placeholder="Password" required>
+
+  <div class="btn-group">
+    <button type="submit" class="btn">Login</button>
+    <a href="register.html" class="btn secondary">Register</a>
+  </div>
 </form>
+
 
 <script src="./js/script.js"></script>
 

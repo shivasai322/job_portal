@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,9 +11,7 @@
 <nav>
   <h2>Job Portal</h2>
 
-  <div class="menu-icon" onclick="toggleMenu()">
-    ☰
-  </div>
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
 
   <ul id="menu">
     <li><a href="index.html">Home</a></li>
@@ -21,17 +21,16 @@
   </ul>
 </nav>
 
-
 <div class="hero">
   <h1>Find Your Dream Job</h1>
-  <input type="text" placeholder="Search jobs...">
   <br><br>
-  <a class="btn" href="jobs.html" onclick="checkLogin()">Find Jobs</a>
 
-  <a class="btn" href="jobs.html" onclick="checkLogin()">Find Jobs</a>
-
-
+  <button class="btn" onclick="goToJobs()">Find Jobs</button>
+  <button class="btn secondary" onclick="goToPostJob()">Post a Job</button>
 </div>
+
+<!-- Script must be here -->
+<script src="js/script.js"></script>
 
 </body>
 </html>

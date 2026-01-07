@@ -47,6 +47,8 @@ function loginUser() {
   }
 
   return false;
+  // localStorage.setItem("loggedIn", "true");
+
 }
 
 
@@ -125,4 +127,23 @@ function checkLogin() {
     window.location.href = "login.html";
   }
 }
+function goToJobs() {
+  if (localStorage.getItem("loggedIn") !== "true") {
+    alert("Please login first");
+    window.location.href = "login.html";
+  } else {
+    window.location.href = "jobs.html";
+  }
+}
+
+function goToPostJob() {
+  if (localStorage.getItem("loggedIn") !== "true") {
+    alert("Please login first");
+    window.location.href = "login.html";
+  } else {
+    window.location.href = "post-job.html";
+  }
+}
+
+
 

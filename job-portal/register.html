@@ -6,21 +6,27 @@
 </head>
 <body>
 
-<h2>Register</h2>
+<!-- <h2>Register</h2>s -->
 
-<form onsubmit="return registerUser()">
-  <input type="text" id="name" placeholder="Name"><br>
-  <input type="email" id="email" placeholder="Email"><br>
-  <input type="password" id="password" placeholder="Password"><br>
+<form onsubmit="return registerUser()" class="slide-up">
+  <h2>Register</h2>
 
-  <select id="role">
+  <input type="text" id="name" placeholder="Name" required>
+  <input type="email" id="email" placeholder="Email" required>
+  <input type="password" id="password" placeholder="Password" required>
+
+  <select id="role" required>
     <option value="">Select Role</option>
     <option>Job Seeker</option>
     <option>Employer</option>
-  </select><br>
+  </select>
 
-  <button class="btn">Register</button>
+  <div class="btn-group">
+    <button type="submit" class="btn">Register</button>
+    <a href="login.html" class="btn secondary">Login</a>
+  </div>
 </form>
+
 
 <script src="./js/script.js"></script>
 

@@ -11,7 +11,7 @@ body {
 }
 h2{
   text-align: center;
-  padding: 30px;
+  padding: 10px;
   font-size: xx-large;
 }
 /* ================== NAVBAR ================== */
@@ -72,7 +72,7 @@ nav a:hover::after {
 }
 
 nav a:hover {
-  color: #00ff66;
+  color: #b700ff;
 }
 
 
@@ -314,5 +314,70 @@ input, select {
   nav ul li {
     margin: 12px 0;
   }
+}
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+/* ========== GLOBAL ANIMATIONS ========== */
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+}
+
+.slide-up {
+  animation: slideUp 0.8s ease forwards;
+}
+
+.zoom-in {
+  animation: zoomIn 0.6s ease forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px) }
+  to { opacity: 1; transform: translateY(0) }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0 }
+  to { transform: scale(1); opacity: 1 }
+}
+.btn-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+nav ul li a {
+  font-weight: 700;            /* Bold */
+  letter-spacing: 0.5px;
+}
+
+/* Individual colors */
+nav ul li:nth-child(1) a { color: white; }   /* Home */
+nav ul li:nth-child(2) a { color: white; }   /* Jobs */
+nav ul li:nth-child(3) a { color: white; }   /* Login */
+nav ul li:nth-child(4) a { color:white; }   /* Register */
+
+nav ul li a:hover {
+  opacity: 0.85;
+}
+/* ======== LOGIN & REGISTER COLOR THEMES ======== */
+
+/* Login Form */
+body.login-page form {
+  background: linear-gradient(135deg, #e0f7ff, #ffffff);
+  border-left: 6px solid #00b4d8;
+}
+
+/* Register Form */
+body.register-page form {
+  background: linear-gradient(135deg, #fff1f2, #ffffff);
+  border-left: 6px solid #ff5c8a;
 }
 
