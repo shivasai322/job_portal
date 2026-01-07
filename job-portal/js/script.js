@@ -58,9 +58,9 @@ function toggleDark() {
 }
 
 let jobs = JSON.parse(localStorage.getItem("jobs")) || [
-  { title: "Developer", company: "Google", location: "Hyderabad" },
-  { title: "Tester", company: "TCS", location: "Chennai" },
-  { title: "Designer", company: "Infosys", location: "Bangalore" }
+  { Role: "Developer", company: "Google", location: "Hyderabad" },
+  { Role: "Tester", company: "TCS", location: "Chennai" },
+  { Role: "Designer", company: "Infosys", location: "Bangalore" }
 ];
 
 
@@ -70,7 +70,7 @@ if (jobList) {
   jobs.forEach(job => {
     jobList.innerHTML += `
   <div class="job">
-    <b>${job.title}</b>
+    <b>${job.Role}</b>
     <p>${job.company}</p>
     <p>${job.location}</p>
     <a class="btn" href="apply.html">Apply</a>
@@ -108,7 +108,7 @@ function postJob() {
 
   let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
 
-  jobs.push({ title: role, company: company, location: location });
+  jobs.push({ Role: role, company: company, location: location });
 
   localStorage.setItem("jobs", JSON.stringify(jobs));
 
