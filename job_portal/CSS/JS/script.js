@@ -30,3 +30,35 @@ function loginUser() {
 }
 
 
+let jobs = [
+  {title:"Developer", company:"Google", location:"Hyderabad"},
+  {title:"Tester", company:"TCS", location:"Chennai"},
+  {title:"Designer", company:"Infosys", location:"Bangalore"}
+];
+
+let jobList = document.getElementById("jobList");
+
+if(jobList){
+  jobs.forEach(job => {
+    jobList.innerHTML += `
+      <div class="job">
+        <b>${job.title}</b> - ${job.company} - ${job.location}
+        <a class="btn" href="apply.html">Apply</a>
+      </div>
+    `;
+  });
+}
+
+function applyJob(){
+  alert("Applied Successfully");
+}
+
+function filterJobs(){
+  let input = document.getElementById("search").value.toLowerCase();
+  let cards = document.getElementsByClassName("job");
+
+  for(let i=0;i<cards.length;i++){
+    let text = cards[i].innerText.toLowerCase();
+    cards[i].style.display = text.includes(input) ? "" : "none";
+  }
+}
