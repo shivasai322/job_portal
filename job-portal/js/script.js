@@ -102,23 +102,29 @@ function postJob() {
   let role = document.getElementById("jobRole").value;
   let company = document.getElementById("companyName").value;
   let location = document.getElementById("jobLocation").value;
+  let lastDate = document.getElementById("lastDate").value;
 
-  if (role === "" || company === "" || location === "") {
+  if (!role || !company || !location || !lastDate) {
     alert("All fields required");
     return false;
   }
 
   let jobs = JSON.parse(localStorage.getItem("jobs")) || [];
 
-  jobs.push({ Role: role, company: company, location: location });
+  jobs.push({
+    Role: role,
+    company: company,
+    location: location,
+    lastDate: lastDate
+  });
 
   localStorage.setItem("jobs", JSON.stringify(jobs));
 
   alert("Job Posted Successfully");
-
   window.location.href = "jobs.html";
   return false;
 }
+
 function toggleMenu() {
   document.getElementById("menu").classList.toggle("show");
 }

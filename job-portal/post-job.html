@@ -19,12 +19,16 @@
 <form onsubmit="return postJob()">
   <h2>Post a Job</h2>
 
-  <input type="text" id="jobRole" placeholder="Job Role">
-  <input type="text" id="companyName" placeholder="Company Name">
-  <input type="text" id="jobLocation" placeholder="Location">
+  <input type="text" id="jobRole" placeholder="Job Role" required>
+  <input type="text" id="companyName" placeholder="Company Name" required>
+  <input type="text" id="jobLocation" placeholder="Location" required>
+
+  <label>Last Date</label>
+  <input type="date" id="lastDate" required>
 
   <button class="btn">Post Job</button>
 </form>
+
 
 <script src="./js/script.js"></script>
 </body>
