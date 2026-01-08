@@ -57,10 +57,11 @@ function toggleDark() {
 }
 
 let jobs = JSON.parse(localStorage.getItem("jobs")) || [
-  { Role: "Developer", company: "Google", location: "Hyderabad" },
-  { Role: "Tester", company: "TCS", location: "Chennai" },
-  { Role: "Designer", company: "Infosys", location: "Bangalore" }
+  { Role: "Developer", company: "Google", location: "Hyderabad", lastDate: "30 June 2026" },
+  { Role: "Tester", company: "TCS", location: "Chennai", lastDate: "25 June 2026" },
+  { Role: "Designer", company: "Infosys", location: "Bangalore", lastDate: "20 June 2026" }
 ];
+
 
 
 let jobList = document.getElementById("jobList");
@@ -72,9 +73,11 @@ if (jobList) {
     <b>${job.Role}</b>
     <p>${job.company}</p>
     <p>${job.location}</p>
+    <p><strong>Last Date:</strong> ${job.lastDate}</p>
     <a class="btn" href="apply.html">Apply</a>
   </div>
 `;
+
 
   });
   localStorage.setItem("jobs", JSON.stringify(jobs));
